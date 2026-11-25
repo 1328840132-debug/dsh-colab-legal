@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — DSH Colab Bridge</title>
+<style>
+:root{color-scheme:light dark}
+body{font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC",sans-serif;max-width:46rem;margin:0 auto;padding:3rem 1.25rem 5rem;color:#1f2328;background:#fff}
+@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}a{color:#6cb6ff}}
+h1{font-size:1.55rem;margin:0 0 .35rem}
+h2{font-size:1.05rem;margin:2rem 0 .5rem}
+.lead{opacity:.75;margin:0 0 2rem}
+code{background:rgba(127,127,127,.16);padding:.12em .38em;border-radius:4px;font-size:.9em}
+a{color:#0a58ca}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid rgba(127,127,127,.28);font-size:.875rem;opacity:.75}
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p class="lead">DSH Colab Bridge · last updated 25 November 2026</p>
+
+<h2>Scope</h2>
+<p>DSH Colab Bridge is a personal desktop application used by a single individual. It is not a public or commercial service
+and it has no other users.</p>
+
+<h2>What is collected</h2>
+<p>The application collects no analytics, no telemetry, and no personal profiles. The only credential it stores is a Google
+OAuth 2.0 refresh token issued to the account holder, together with its OAuth client identifier and secret.</p>
+
+<h2>Where data is stored</h2>
+<p>All credentials are stored locally on the owner's computer, in the file
+<code>%USERPROFILE%\.dsh\local\colab-mcp\token.json</code>. They are never uploaded to, or mirrored by, any server operated
+by the author of this application.</p>
+
+<h2>How data is used</h2>
+<p>The stored credential is used for exactly one purpose: to obtain a short-lived Google access token so the application can
+call the Google Colab API (<code>https://colaboratory.googleapis.com</code>) on the account holder's behalf. That is the only
+Google service contacted.</p>
+
+<h2>Third parties</h2>
+<p>No data is shared with, or sold to, any third party. Requests go only to Google's own API endpoints. There are no
+advertising, tracking, or analytics providers involved.</p>
+
+<h2>Retention and deletion</h2>
+<p>The credential is retained until it is deleted. It can be removed at any time by deleting the token file above, and the
+Google-side authorisation can be revoked at
+<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Revoking access there invalidates the
+stored refresh token immediately.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:yi.ding0612@gmail.com">yi.ding0612@gmail.com</a></p>
+
+<footer><a href="./index.html">Home</a> · <a href="./terms.html">Terms of service</a></footer>
+</body>
+</html>

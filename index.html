@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DSH Colab Bridge — Home</title>
+<style>
+:root{color-scheme:light dark}
+body{font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC",sans-serif;max-width:46rem;margin:0 auto;padding:3rem 1.25rem 5rem;color:#1f2328;background:#fff}
+@media(prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}a{color:#6cb6ff}}
+h1{font-size:1.6rem;line-height:1.25;margin:0 0 .4rem}
+h2{font-size:1.05rem;margin:2.2rem 0 .6rem}
+p,li{color:inherit}
+.lead{opacity:.75;margin:0 0 2rem}
+code{background:rgba(127,127,127,.16);padding:.12em .38em;border-radius:4px;font-size:.9em}
+a{color:#0a58ca}
+footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid rgba(127,127,127,.28);font-size:.875rem;opacity:.75}
+</style>
+</head>
+<body>
+<h1>DSH Colab Bridge</h1>
+<p class="lead">A personal, single-user integration that connects DeepSeek Harness to the Google Colab API through the official Colab MCP server.</p>
+
+<h2>What this is</h2>
+<p>DSH Colab Bridge is a self-hosted desktop tool. It runs locally on the owner's own computer and connects to
+<code>https://colaboratory.googleapis.com/mcp</code> so that an AI agent can create Colab runtimes and execute Python code inside them.</p>
+
+<h2>Who uses it</h2>
+<p>The application is used by its owner only. There is no sign-up, no multi-user access, and no public service. The Google
+OAuth client behind it is registered as a desktop application and is never distributed.</p>
+
+<h2>What it does with the Google account</h2>
+<p>It requests a single Google scope, <code>https://www.googleapis.com/auth/colaboratory</code>, in order to create, run,
+and delete Colab runtimes that belong to the account holder. Nothing is read from, or written to, any other Google service.</p>
+
+<h2>Data handling</h2>
+<p>OAuth credentials stay on the owner's machine, in the local file <code>%USERPROFILE%\.dsh\local\colab-mcp\token.json</code>.
+No data is transmitted to any third-party server beyond Google's own API endpoints. See the
+<a href="./privacy.html">privacy policy</a> for details.</p>
+
+<footer>
+  <a href="./privacy.html">Privacy policy</a> · <a href="./terms.html">Terms of service</a><br>
+  Contact: <a href="mailto:yi.ding0612@gmail.com">yi.ding0612@gmail.com</a>
+</footer>
+</body>
+</html>
